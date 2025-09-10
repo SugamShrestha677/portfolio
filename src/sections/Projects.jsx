@@ -3,6 +3,7 @@ import grocery from '../assets/grocery.png'
 import estate from '../assets/estate.png'
 import ecommerce from '../assets/ecommerce.png'
 import dashboard from '../assets/dashboard-app.webp'
+import RevealScroll from '../Ui/RevealScroll'
 const Projects = () => {
   const[projects] = useState([
     {image:estate,name:"Estate", brief:"A modern real estate landing page with responsive design and sleek visuals, built using React and Tailwind CSS.",link:"https://estateprojects.netlify.app/"},
@@ -11,6 +12,7 @@ const Projects = () => {
   ])
   return (
     <section id='project' className='min-h-screen flex items-center font-mono justify-center py-20 '>
+      <RevealScroll>
       <div className='max-w-3xl mx-auto px-4'>
         <h2 className='max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center'>Features Projects</h2>
 
@@ -36,6 +38,7 @@ const Projects = () => {
           }
         </div>
       </div>
+      </RevealScroll>
     </section>
   )
 }
