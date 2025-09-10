@@ -6,6 +6,8 @@ import Home from './sections/Home';
 import AnimationWaves from './Ui/AnimationWaves';
 import About from './sections/About';
 import Projects from './sections/Projects';
+import Contact from './sections/Contact';
+import RevealScroll from './Ui/RevealScroll';
 
 const App = () => {
   const [isLoading,setIsLoading] = useState(false);
@@ -17,10 +19,13 @@ const App = () => {
     }
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
       <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
+      <RevealScroll>
       <Home/>
       <AnimationWaves/>
+      </RevealScroll>
       <About/>
       <Projects/>
+      <Contact/>
     </>
   )
 }

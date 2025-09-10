@@ -1,4 +1,5 @@
 import React from "react";
+import RevealScroll from "../Ui/RevealScroll";
 
 const About = () => {
   const skills = [
@@ -15,6 +16,7 @@ const About = () => {
       id="about"
       className="min-h-screen font-mono flex items-center justify-center py-20 "
     >
+      <RevealScroll>
       <div className="max-w-3xl mx-auto px-4">
         <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">
           About Me
@@ -59,6 +61,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      </RevealScroll>
     </section>
   );
 };
