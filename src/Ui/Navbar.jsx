@@ -36,7 +36,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 About
               </a>
               <a
-                href="#projrect"
+                href="#project"
                 className="text-gray-300 text-lg hover:text-xl hover:text-white transition-all"
               >
                 Project
