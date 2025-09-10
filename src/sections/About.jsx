@@ -21,9 +21,9 @@ const About = () => {
         </h2>
         <div className="p-8 mb-6 rounded-xl border-white/10 border-2 hover:-translate-y-1 transition-all ">
           <p className="text-gray-300 mb-5 text-xl">
-            {" "}
+            
             Passionate developer with expertse in building scalable web
-            applications and creating innovative solutions.{" "}
+            applications and creating innovative solutions.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
@@ -39,12 +39,18 @@ const About = () => {
           </div>
 
           <div className="p-6 hover:-translate-y-1 transition-all">
-              <h3 className="text-2xl text-center font-bold mb-8">Edication</h3>
+              <h3 className="text-2xl text-center font-bold mb-8">Education</h3>
               <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
                 <li>
                     <strong><em>Bsc in Software Engineering (hons)</em></strong>
                     x University of Bedfordshire (2023-2027)
                 </li>
+              </ul>
+          </div>
+
+          <div className="p-6 hover:-translate-y-1 transition-all">
+              <h3 className="text-2xl text-center font-bold mb-8">Cerification</h3>
+              <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
 
                 <li>
                   Cisco Networking, React(geeks for geeks), Hackathon Participation
