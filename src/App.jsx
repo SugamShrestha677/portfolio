@@ -3,6 +3,8 @@ import Navbar from './Ui/Navbar'
 import MobileMenu from './Ui/MobileMenu';
 import LoadingScreenAnimation from './Ui/LoadingScreenAnimation';
 import Home from './sections/Home';
+import AnimationWaves from './Ui/AnimationWaves';
+import About from './sections/About';
 
 const App = () => {
   const [isLoading,setIsLoading] = useState(false);
@@ -15,6 +17,8 @@ const App = () => {
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
       <MobileMenu isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen}/>
       <Home/>
+      <AnimationWaves/>
+      <About/>
     </>
   )
 }
