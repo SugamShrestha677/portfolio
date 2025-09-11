@@ -18,7 +18,7 @@ const Footer = () => {
                     <FaInstagramSquare/>
                 </a>
             </div>
-            <p>@2025 Sugam Shrestha. All rights reserved. </p>
+            <p className='text-white mt-8 text-sm '>@2025 Sugam Shrestha. All rights reserved. </p>
         </div>
     </footer>
   )

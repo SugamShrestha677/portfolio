@@ -14,7 +14,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen font-mono flex items-center justify-center py-20 "
+      className="min-h-screen font-mono flex items-center justify-center py-20 overflow-hidden"
     >
       <RevealScroll>
       <div className="max-w-3xl mx-auto px-4">
@@ -29,7 +29,7 @@ const About = () => {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 ">
-          <div className="rounded-xl p-6 hover:translate-y-1 transition-all">
+          <div className="rounded-xl p-6 hover:-translate-y-1 transition-all">
             <h3 className="text-2xl text-center font-bold mb-8">Skills</h3>
             <div className="flex justify-center flex-wrap gap-2 ">
               {
@@ -50,16 +50,16 @@ const About = () => {
               </ul>
           </div>
 
-          <div className="p-6 hover:-translate-y-1 transition-all">
+        </div>
+          <div className="p-6 hover:-translate-y-1 transition-all flex flex-col items-center justify-center">
               <h3 className="text-2xl text-center font-bold mb-8">Cerification</h3>
-              <ul className="pl-5 list-disc list-inside text-lg text-gray-300">
+              <ul className="pl-5 list-disc list-inside text-lg w-[250px] text-gray-300">
 
                 <li>
                   Cisco Networking, React(geeks for geeks), Hackathon Participation
                 </li>
               </ul>
           </div>
-        </div>
       </div>
       </RevealScroll>
     </section>

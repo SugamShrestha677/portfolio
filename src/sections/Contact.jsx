@@ -1,66 +1,66 @@
-import React from "react";
-import RevealScroll from "../Ui/RevealScroll";
+import RevealOnScroll from "../Ui/RevealScroll";
 
-const Contact = () => {
+export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen font-mono flex items-center justify-center py-20"
+      className="lg:w-[95%] w-full min-h-screen m-auto rounded-xl grid grid-cols-1 xl:px-36 px-6 py-20 gap-10"
     >
-      <RevealScroll>
-        <div className="px-4 w-150">
-          <h2 className="max-w-3xl text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center">
-            Get in touch
+      <RevealOnScroll>
+        <div className="px-1 w-full">
+          <h2 className="max-w-full text-4xl font-semibold mb-12 bg-gradient-to-r from-teal-500 to-indigo-600 bg-clip-text text-transparent text-center ">
+            Get In touch
           </h2>
 
           <form
-            action="https://formsubmit.co/xresthasugam@gmail.com"
+            action="https://formsubmit.co/zinelabidine98@gmail.com"
             method="POST"
-            className="space-y-6 "
+            className="space-y-6"
           >
-            <div className="relative ">
+            <div className="">
               <input
                 type="text"
-                placeholder="Name..."
                 id="name"
                 name="name"
+                placeholder="Name..."
                 required
-                className="w-full bg-white/10 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
+                className="w-full bg-white/10 border border-white/10 rounded  px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
               />
             </div>
-            <div className="relative ">
+            <div className="relative">
               <input
                 type="email"
-                placeholder="example@gmail.com"
                 id="email"
                 name="email"
+                placeholder="example@gmail.com"
                 required
-                className="w-full bg-white/10 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
+                className="w-full bg-white/10 border border-white/10 rounded  px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
               />
             </div>
-            <div className="relative ">
+            <div className="relative">
               <textarea
                 type="message"
-                placeholder="Type your message"
                 id="message"
-                rows={6}
                 name="message"
+                rows={6}
+                placeholder="Type your message..."
                 required
-                className="w-full bg-white/10 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
+                className="w-full bg-white/10 border border-white/10 rounded  px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5 "
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r flex justify-center cursor-pointer from-teal-500 to-indigo-600 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] py-3"
+              className=" w-full bg-gradient-to-r flex justify-center cursor-pointer from-teal-500 to-indigo-600 px-6 rounded font-medium transition relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]  py-3 "
             >
-              Submit
+              {" "}
+              Submit{" "}
             </button>
           </form>
         </div>
-      </RevealScroll>
+      </RevealOnScroll>
     </section>
   );
 };
 
-export default Contact;
+export default Contact
