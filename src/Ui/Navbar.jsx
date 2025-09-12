@@ -9,7 +9,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
   }, [isMenuOpen]);
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10,10,10.0.8)] backdrop-blur-lg px-1 border-b-2 border-white/10 shadow-lg">
+    <nav className="fixed top-0 w-full z-40 bg-[#1C0D30] backdrop-blur-lg px-1 border-b-2 border-white/10 shadow-lg">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex justify-between items-center font-mono h-16">
           <Logo />
