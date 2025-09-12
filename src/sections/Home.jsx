@@ -1,5 +1,5 @@
 import React from "react";
-import resume from "../assets/sugam_shrestha CV.pdf";
+import resume from "../assets/SugamShrestha-Frontend.pdf";
 import profile from "../assets/profiles.png";
 import { FiDownload } from "react-icons/fi";
 const Home = () => {
