@@ -13,7 +13,7 @@ export const Contact = () => {
           </h2>
 
           <form
-            action="https://formsubmit.co/zinelabidine98@gmail.com"
+            action="https://formsubmit.co/sugam8727@gmail.com"
             method="POST"
             className="space-y-6"
           >
