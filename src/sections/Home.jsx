@@ -21,11 +21,7 @@ const Home = () => {
           Hi, I’m Sugam Shrestha
         </h1>
         <p className="text-gray-300 text-lg mb-8 max-w-lg mx-auto">
-          A passionate web developer dedicated to crafting intuitive and dynamic
-          user experiences. With a strong foundation in front-end technologies
-          and a keen eye for design, I specialize in building responsive and
-          accessible websites. Explore my portfolio to see how I bring ideas to
-          life through code.{""}
+          A passionate web developer creating responsive, user-friendly, and accessible websites. I combine design and code to deliver engaging digital experiences. Explore my portfolio to see my work{""}
         </p>
 
         <div className="flex justify-center items-center space-x-4">
