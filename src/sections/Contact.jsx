@@ -13,10 +13,9 @@ export const Contact = () => {
           </h2>
 
           <form
-          name="contact" method="POST" data-netlify="true"
+          name="contact" method="POST" action="https://formsubmit.co/info@shresthasugam.com.np"
             className="space-y-6"
           >
-  <input type="hidden" name="form-name" value="contact" />
             <div className="">
               <input
                 type="text"
