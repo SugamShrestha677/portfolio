@@ -13,10 +13,13 @@ export const Contact = () => {
           </h2>
 
           <form
-            action="https://formsubmit.co/sugam8727@gmail.com"
-            method="POST"
+{/*             action="https://formsubmit.co/sugam8727@gmail.com"
+            method="POST" */}
+          name="contact" method="POST" data-netlify="true"
             className="space-y-6"
           >
+          <!-- 👇 Netlify needs this -->
+  <input type="hidden" name="form-name" value="contact" />
             <div className="">
               <input
                 type="text"
@@ -62,5 +65,6 @@ export const Contact = () => {
     </section>
   );
 };
+
 
 export default Contact
