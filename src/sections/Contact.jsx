@@ -13,8 +13,6 @@ export const Contact = () => {
           </h2>
 
           <form
-{/*             action="https://formsubmit.co/sugam8727@gmail.com"
-            method="POST" */}
           name="contact" method="POST" data-netlify="true"
             className="space-y-6"
           >
@@ -68,3 +66,4 @@ export const Contact = () => {
 
 
 export default Contact
+
