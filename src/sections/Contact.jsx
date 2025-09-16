@@ -16,7 +16,6 @@ export const Contact = () => {
           name="contact" method="POST" data-netlify="true"
             className="space-y-6"
           >
-          <!-- 👇 Netlify needs this -->
   <input type="hidden" name="form-name" value="contact" />
             <div className="">
               <input
