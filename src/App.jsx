@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './Ui/Navbar'
 import MobileMenu from './Ui/MobileMenu';
 import LoadingScreenAnimation from './Ui/LoadingScreenAnimation';
@@ -9,6 +10,7 @@ import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import RevealScroll from './Ui/RevealScroll';
 import Footer from './sections/Footer';
+import BlogPostSummary from "./pages/BlogPostSummary";
 
 const App = () => {
   const [isLoading,setIsLoading] = useState(false);
@@ -28,6 +30,14 @@ const App = () => {
       <Projects/>
       <Contact/>
       <Footer/>
+      <Router>
+        <Routes>
+          <Route 
+          path= "/blog/10-best-practices-clean-react-code"
+          element={<BlogPostSummary />}
+          />
+        </Routes>
+      </Router>
     </>
   )
 }
