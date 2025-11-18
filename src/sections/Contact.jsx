@@ -13,7 +13,7 @@ export const Contact = () => {
           </h2>
 
           <form
-          name="contact" method="POST" action="https://formsubmit.co/info@shresthasugam.com.np"
+          // name="contact" method="POST" action="https://formsubmit.co/info@shresthasugam.com.np"
             className="space-y-6"
           >
             <div className="">
