@@ -18,11 +18,20 @@ A modern, responsive portfolio website built with **React** and **Tailwind CSS**
 
 ## 🛠️ Tech Stack
 - **Frontend:** React, JavaScript (ES6+)
-- **Styling:** Tailwind CSS, Material UI, Bootstrap
-- **Deployment:** Netlify / Vercel (or your chosen hosting)
-- **Other Tools:** REST API integration, GitHub Pages
+- **Styling:** Tailwind CSS
+- **Deployment:** Hosted on a Nepali web hosting provider with a custom domain [shresthasugam.com.np](https://shresthasugam.com.np/)
+- **Other Tools:** GitHub Pages
 
 ---
+
+## 🚀 Deployment Process
+1. Built the project using **Vite + React**.
+2. Configured production build with `npm run build`.
+3. Uploaded build files to hosting provider.
+4. Connected custom domain [shresthasugam.com.np](https://shresthasugam.com.np/) via DNS settings.
+5. Integrated **Cloudflare** for DNS management, caching, and performance optimization.
+6. Enabled **HTTPS/SSL** through Cloudflare for secure access.
+
 
 ## 📂 Project Structure
 - **PORTFOLIO/**
