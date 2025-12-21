@@ -1,12 +1,72 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Title
+# Sugam Shrestha Portfolio
 
-Currently, two official plugins are available:
+A modern, responsive portfolio website built with **React** and **Tailwind CSS** to showcase my skills as a frontend developer. The site highlights projects such as real estate landing pages, grocery storefronts, and e-commerce interfaces. It emphasizes clean design, accessibility, and user-friendly navigation, while serving as a central hub for my professional work, resume, and contact information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
+- Responsive design for desktop, tablet, and mobile
+- Built with **React** and styled using **Tailwind CSS**
+- Showcases multiple projects (real estate, grocery, e-commerce)
+- Smooth navigation and clean UI
+- Contact section for professional inquiries
+- Resume integration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+- **Frontend:** React, JavaScript (ES6+)
+- **Styling:** Tailwind CSS, Material UI, Bootstrap
+- **Deployment:** Netlify / Vercel (or your chosen hosting)
+- **Other Tools:** REST API integration, GitHub Pages
+
+---
+
+## 📂 Project Structure
+- **PORTFOLIO/**
+  - **dist/**
+  - **node_modules/**
+  - **public/**
+  - **src/**
+    - **assets/**
+    - **pages/**
+      - BlogPostSummary.jsx
+    - **sections/**
+      - About.jsx  
+      - Contact.jsx  
+      - Footer.jsx  
+      - Home.jsx  
+      - Projects.jsx
+    - **Ui/**
+      - AnimationWaves.jsx  
+      - LoadingScreenAnimation.jsx  
+      - Logo.jsx  
+      - MobileMenu.jsx  
+      - Navbar.jsx  
+      - RevealScroll.jsx
+    - App.jsx  
+    - index.css  
+    - main.jsx
+  - .gitignore  
+  - eslint.config.js  
+  - index.html  
+  - package-lock.json  
+  - package.json  
+  - README.md  
+  - vite.config.js
+
+
+---
+
+## ⚡ Installation & Setup
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/portfolio.git
+cd portfolio
+npm install
+npm start
+
+
