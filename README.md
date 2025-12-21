@@ -1,5 +1,3 @@
-
-# Project Title
 # Sugam Shrestha Portfolio
 
 A modern, responsive portfolio website built with **React** and **Tailwind CSS** to showcase my skills as a frontend developer. The site highlights projects such as real estate landing pages, grocery storefronts, and e-commerce interfaces. It emphasizes clean design, accessibility, and user-friendly navigation, while serving as a central hub for my professional work, resume, and contact information.
