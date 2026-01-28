@@ -29,7 +29,7 @@ const Projects = () => {
                       <div className='flex flex-col text-center my-5 py-3 justify-center gap-3 border-2 border-white/10 hover:border-blue-500/30 hover:shadow-[9_2px_8px_rgba(59,130,22.46,0.2)] cursor-pointer rounded-xl'>
                         <p className='text-gray-200'>View Project</p>
                         <a href={project.link} className='flex justify-between items-center font-bold text-blue-400 transition-colors hover:text-white'>
-                        <img src={project.image} alt={project.name}/>
+                        <img src={project.image} alt={project.name} loading="lazy" decoding="async"/>
                         </a>
                       </div>
                     </div>
@@ -42,5 +42,6 @@ const Projects = () => {
     </section>
   )
 }
+
 
 export default Projects

@@ -12,6 +12,8 @@ const Home = () => {
       <div className="text-center z-10 px-4">
         <img
           src={profile}
+          loading="lazy"
+          decoding="async"
           alt="Profile img"
           className="w-[200px] border-0 mt-20 rounded-full shadow-lg shadow-gray-500/70 lg:m-0 lg:max-w-[250px] object-cover object-bottom hover:translate-y-1 transition-all "
         />
@@ -65,3 +67,4 @@ transition"
 };
 
 export default Home;
+
