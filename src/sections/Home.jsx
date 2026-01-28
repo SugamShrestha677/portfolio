@@ -2,6 +2,7 @@ import React from "react";
 import resume from "../assets/SugamShrestha-Frontend.pdf";
 import profile from "../assets/profiles.png";
 import { FiDownload } from "react-icons/fi";
+import { FiEye } from "react-icons/fi";
 const Home = () => {
   return (
     <section
@@ -21,7 +22,9 @@ const Home = () => {
           Hi, I’m Sugam Shrestha
         </h1>
         <p className="text-gray-300 text-lg mb-8 max-w-lg mx-auto">
-          A passionate web developer creating responsive, user-friendly, and accessible websites. I combine design and code to deliver engaging digital experiences. Explore my portfolio to see my work{""}
+          A passionate web developer creating responsive, user-friendly, and
+          accessible websites. I combine design and code to deliver engaging
+          digital experiences. Explore my portfolio to see my work{""}
         </p>
 
         <div className="flex justify-center items-center space-x-4">
@@ -31,6 +34,20 @@ const Home = () => {
           >
             Contact Me
           </a>
+
+          <a
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-gradient-to-r from-teal-500 to-indigo-600
+py-3 px-6 rounded font-mono font-medium text-white
+hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]
+transition"
+          >
+            Preview Resume
+            <FiEye className="text-xl" />
+          </a>
+
           <a
             href={resume}
             className="bg-gradient-to-r flex flex-row from-teal-500 to-indigo-600 py-3 px-6 rounded hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] font-medium font-mono transition relative overflow-hidden"
