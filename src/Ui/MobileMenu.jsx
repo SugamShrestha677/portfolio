@@ -34,12 +34,28 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen }) => {
         About
       </a>
       <a
-        href="#projrect"
+        href="#project"
         className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 ${
           isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
         } `} onClick={()=> setIsMenuOpen(false)}
       >
         Project
+      </a>
+      <a
+        href="#experience"
+        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 ${
+          isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+        } `} onClick={()=> setIsMenuOpen(false)}
+      >
+        Experience
+      </a>
+      <a
+        href="#achievements"
+        className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 ${
+          isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
+        } `} onClick={()=> setIsMenuOpen(false)}
+      >
+        Achievements
       </a>
       <a
         href="#contact"

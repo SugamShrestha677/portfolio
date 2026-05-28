@@ -4,7 +4,7 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="lg:w-[95%] w-full min-h-screen m-auto rounded-xl grid grid-cols-1 xl:px-36 px-6 py-20 gap-10"
+      className="lg:w-[50%] w-full min-h-screen m-auto rounded-xl grid grid-cols-1 xl:px-36 px-6 py-20 gap-10"
     >
       <RevealOnScroll>
         <div className="px-1 w-full">

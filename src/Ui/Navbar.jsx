@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Logo from "./Logo";
 import { MdMenu } from "react-icons/md";
 import { FaXmark } from "react-icons/fa6";
@@ -10,7 +10,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
 
   return (
     <nav className="fixed top-0 w-full z-40 bg-[#1C0D30] backdrop-blur-lg px-1 border-b-2 border-white/10 shadow-lg">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-6xl mx-auto px-0">
         <div className="flex justify-between items-center font-mono h-16">
           <Logo />
 
@@ -40,6 +40,18 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen }) => {
                 className="text-gray-300 text-lg hover:text-xl hover:text-white transition-all"
               >
                 Project
+              </a>
+              <a
+                href="#experience"
+                className="text-gray-300 text-lg hover:text-xl hover:text-white transition-all"
+              >
+                Experience
+              </a>
+              <a
+                href="#achievements"
+                className="text-gray-300 text-lg hover:text-xl hover:text-white transition-all"
+              >
+                Achievements
               </a>
               <a
                 href="#contact"

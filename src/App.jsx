@@ -7,6 +7,8 @@ import Home from './sections/Home';
 import AnimationWaves from './Ui/AnimationWaves';
 import About from './sections/About';
 import Projects from './sections/Projects';
+import Experience from './sections/Experience';
+import Certifications from './sections/Certifications';
 import Contact from './sections/Contact';
 import RevealScroll from './Ui/RevealScroll';
 import Footer from './sections/Footer';
@@ -28,6 +30,8 @@ const App = () => {
       </RevealScroll>
       <About/>
       <Projects/>
+      <Experience/>
+      <Certifications/>
       <Contact/>
       <Footer/>
       <Router>
