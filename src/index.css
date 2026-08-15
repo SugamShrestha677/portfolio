@@ -1,52 +1,94 @@
 @import 'tailwindcss';
-html,body {
+
+/* ── Base resets ───────────────────────────────────────────── */
+html {
+  background-color: #1C0D30;
+}
+
+html, body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   background-color: #1C0D30;
   color: #f3f4f6;
   scroll-behavior: smooth;
-  
+  overflow-x: hidden;
 }
 
+/* Prevent iOS tap highlight flash */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
 
-@layer utilities{
-  @keyframes loading {
-    0%{
-      transform: translateX(-100%);
-    }
-    100%{
-      transform: translateX(150%);
-    }
+/* ── GSAP utility classes ──────────────────────────────────── */
+.glass-nav {
+  background-color: rgba(28, 13, 48, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.glow-border {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+.hero-gradient-bg {
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 40%,
+    rgba(20, 184, 166, 0.12) 0%,
+    rgba(89, 42, 243, 0.08) 40%,
+    transparent 70%
+  );
+}
+
+/* ── Accessibility: Reduced Motion ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
-  .animate-loading-bar{
+}
+
+/* ── Loading Bar Animation ─────────────────────────────────── */
+@layer utilities {
+  @keyframes loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(150%); }
+  }
+  .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
 }
 
-
-@layer utilities{
+/* ── Blink Cursor Animation ────────────────────────────────── */
+@layer utilities {
   @keyframes blink {
-    0%,100%{
-      opacity: 1;
-    }
-    50%{
-      opacity: 0;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
   }
-  .animate-blink{
-    animation: blink 3.8s step-end infinite ;
+  .animate-blink {
+    animation: blink 3.8s step-end infinite;
   }
 }
 
-
-
-.reveal{
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 2s ease, transform 2s ease;
+/* ── Selection styling ──────────────────────────────────────── */
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #fff;
 }
-.reveal.visible{
-  opacity: 1;
-  transform: translateY(0);
+
+/* ── Smooth scrollbar (Webkit) ──────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1C0D30;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.4);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.6);
 }
