@@ -3,9 +3,18 @@ import { useGSAP } from "@gsap/react";
 import grocery from "../assets/grocery.png";
 import estate from "../assets/estate.png";
 import ecommerce from "../assets/ecommerce.png";
+import elearning from "../assets/elearning.png";
 import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
 
 const projects = [
+  {
+    image: elearning,
+    name: "Learning Management System (LMS)",
+    brief:
+      "A full-stack learning platform for managing courses, SCORM content, assessments, enrollments, live classes, certificates, and real-time student progress.",
+    link: "https://buildandhire.me/",
+    tech: ["Next.js", "Django","DRF", "PostgreSQL"],
+  },
   {
     image: estate,
     name: "Estate",
