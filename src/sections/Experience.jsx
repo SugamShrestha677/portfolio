@@ -4,11 +4,17 @@ import { useGSAP } from "@gsap/react";
 import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
 
 const Experience = () => {
-  const responsibilities = [
-    "Learned and used Docker for containerization, starting from zero knowledge.",
-    "Used basic AWS services such as EC2 and S3 without senior-level scope.",
-    "Integrated Redis for caching and session management.",
-    "Implemented async tasks with Celery for background jobs.",
+  const Vayuresponsibilities = [
+    "Developed and maintained web application features using Django, Next.js, and REST APIs.",
+    "Implemented Firebase Push Notifications to enable real-time user notifications and engagement.",
+    "Worked on frontend and backend integration, connecting Next.js interfaces with Django APIs and application services.",
+    "Collaborated with the development team through Git, code reviews, debugging, and feature development, gaining experience working in a production software environment.",
+  ];
+  const Depthresponsibilities = [
+    "Built backend features using Django and Python while gaining practical experience in backend development.",
+    "Learned and applied Docker for application containerization and development environment management.",
+    "Worked with AWS services including EC2 and S3 for basic cloud deployment and storage use cases.",
+    "Integrated Redis and Celery for caching, session management, and asynchronous background task processing.",
   ];
 
   const sectionRef = useRef(null);
@@ -121,6 +127,42 @@ const Experience = () => {
             <div>
               <div className="flex items-center gap-3 text-blue-400">
                 <FaBriefcase />
+                <h3 className="text-xl sm:text-2xl font-semibold">Vayu Tech Pvt Ltd</h3>
+              </div>
+              <p className="mt-2 text-lg text-gray-200">
+                Associate Software Developer
+              </p>
+            </div>
+
+            <span className="inline-flex w-fit rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-300">
+              June 2026 – Present
+            </span>
+          </div>
+
+          <ul className="mt-6 space-y-3 text-gray-300 pl-4">
+            {Vayuresponsibilities.map((item) => (
+              <li key={item} data-exp-item className="flex gap-3">
+                <span className="mt-2 h-2 w-2 flex-none rounded-full bg-blue-400" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div
+          data-exp-card
+          className="rounded-2xl border  mt-6 border-white/10 bg-white/5 p-5 sm:p-6 md:p-8 shadow-lg shadow-black/20 relative overflow-hidden"
+        >
+          {/* Animated left accent border */}
+          <div
+            ref={borderRef}
+            className="absolute left-0 top-0 h-full w-1 bg-blue-500 rounded-l-2xl"
+          />
+
+          <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between pl-4">
+            <div>
+              <div className="flex items-center gap-3 text-blue-400">
+                <FaBriefcase />
                 <h3 className="text-xl sm:text-2xl font-semibold">Depth Nepal</h3>
               </div>
               <p className="mt-2 text-lg text-gray-200">
@@ -134,7 +176,7 @@ const Experience = () => {
           </div>
 
           <ul className="mt-6 space-y-3 text-gray-300 pl-4">
-            {responsibilities.map((item) => (
+            {Depthresponsibilities.map((item) => (
               <li key={item} data-exp-item className="flex gap-3">
                 <span className="mt-2 h-2 w-2 flex-none rounded-full bg-blue-400" />
                 <span>{item}</span>
@@ -142,6 +184,8 @@ const Experience = () => {
             ))}
           </ul>
         </div>
+
+        
       </div>
     </section>
   );

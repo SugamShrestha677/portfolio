@@ -219,7 +219,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="flex flex-col text-center w-full py-3 justify-center gap-3 border-2 border-white/10 hover:border-blue-500/30 cursor-pointer rounded-xl overflow-hidden"
               >
-                <p className="text-gray-200 text-sm font-medium">View Project ↗</p>
+                <p className="text-gray-200 text-sm font-medium mb-6">View Project ↗</p>
                 <img
                   data-project-img
                   src={project.image}
