@@ -1,6 +1,32 @@
 import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import {
+  SiPython,
+  SiJavascript,
+  SiReact,
+  SiNextdotjs,
+  SiDjango,
+  SiTailwindcss,
+  SiPostgresql,
+  SiRedis,
+  SiCelery,
+  SiDocker,
+  SiAmazonwebservices,
+  SiGit,
+  SiGithub,
+  SiFigma,
+  SiJira,
+  SiClickup,
+  SiNotion,
+  SiPostman,
+  SiNpm,
+  SiVercel,
+  SiRender,
+} from "react-icons/si";
+
+import { FaPlug } from "react-icons/fa6";
+import { VscVscode } from "react-icons/vsc";
+import {
   FaArrowUpRightFromSquare,
   FaBriefcase,
   FaCalendarDays,
@@ -12,29 +38,69 @@ import {
   FaLocationDot,
   FaServer,
   FaWandMagicSparkles,
+  FaChartLine
 } from "react-icons/fa6";
 
 import useScrollReveal from "../hooks/useScrollReveal";
 import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
 
 const About = () => {
-  const skills = [
-    "Python",
-    "Django",
-    "Django REST Framework",
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Tailwind CSS",
-    "PostgreSQL",
-    "Redis",
-    "Celery",
-    "Docker",
-    "AWS",
-    "Git",
-    "GitHub",
-    "REST APIs",
-  ];
+  const technologyGroups = [
+  {
+    title: "Languages & Frameworks",
+    items: [
+      { name: "Python", icon: SiPython },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "React", icon: SiReact },
+      { name: "Next.js", icon: SiNextdotjs },
+      { name: "Django", icon: SiDjango },
+      { name: "Tailwind CSS", icon: SiTailwindcss },
+    ],
+  },
+
+  {
+    title: "Backend & Data",
+    items: [
+      { name: "Django REST Framework", icon: SiDjango },
+      { name: "PostgreSQL", icon: SiPostgresql },
+      { name: "Redis", icon: SiRedis },
+      { name: "Celery", icon: SiCelery },
+      { name: "REST APIs", icon: FaPlug },
+    ],
+  },
+
+  {
+    title: "Cloud & DevOps",
+    items: [
+      { name: "Docker", icon: SiDocker },
+      { name: "AWS", icon: SiAmazonwebservices },
+      { name: "Render", icon: SiRender },
+      { name: "Git", icon: SiGit },
+      { name: "GitHub", icon: SiGithub },
+    ],
+  },
+
+  {
+    title: "Design & Collaboration",
+    items: [
+      { name: "Figma", icon: SiFigma },
+      { name: "Jira", icon: SiJira },
+      { name: "ClickUp", icon: SiClickup },
+      { name: "Notion", icon: SiNotion },
+    ],
+  },
+
+  {
+    title: "Development & Monitoring",
+    items: [
+      { name: "VS Code", icon: VscVscode },
+      { name: "Postman", icon: SiPostman },
+      { name: "npm", icon: SiNpm },
+      { name: "Vercel", icon: SiVercel },
+      { name: "UptimeRobot", icon: FaChartLine },
+    ],
+  },
+];
 
   const expertise = [
   {
@@ -268,10 +334,9 @@ const About = () => {
             <span className="bg-gradient-to-r from-teal-400 via-blue-400 to-indigo-500 bg-clip-text text-transparent">
               purpose
             </span>
-            .
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-gray-400 sm:text-base">
+          <p className="mx-auto mt-5 max-w-2xl text-md leading-7 text-gray-300 sm:text-base">
             Full-stack developer focused on backend engineering, modern web
             applications, and practical software solutions.
           </p>
@@ -297,14 +362,14 @@ const About = () => {
                 <span className="text-teal-400">working software.</span>
               </h3>
 
-              <p className="max-w-3xl text-sm leading-7 text-gray-400 sm:text-base">
+              <p className="max-w-3xl text-md leading-7 text-gray-300 sm:text-base">
                 I am a full-stack-focused developer with a strong interest in
                 backend systems and practical problem solving. I enjoy
                 transforming ideas into reliable features, with attention to
                 clean architecture, maintainable code, and user experience.
               </p>
 
-              <p className="mt-4 max-w-3xl text-sm leading-7 text-gray-400 sm:text-base">
+              <p className="mt-4 max-w-3xl text-md leading-7 text-gray-300 sm:text-base">
                 My experience includes backend engineering, database-driven
                 applications, caching, asynchronous background processing,
                 cloud services, and modern React-based interfaces. I
@@ -408,7 +473,7 @@ const About = () => {
                     {item.title}
                   </h4>
 
-                  <p className="text-sm leading-6 text-gray-500">
+                  <p className="text-sm leading-6 text-gray-400">
                     {item.description}
                   </p>
                 </div>
@@ -417,40 +482,101 @@ const About = () => {
           </div>
         </div>
 
-        {/* Skills */}
         <div
-          ref={skillsRef}
-          className="mb-8 rounded-2xl border border-white/[0.08] bg-white/[0.035] p-6 sm:p-8"
+  ref={skillsRef}
+  className="relative mb-8 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.035] py-8 sm:py-10"
+>
+  {/* Header */}
+  <div className="relative z-10 mb-10 px-6 sm:px-8">
+    <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <p className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-teal-200">
+          <span className="h-1.5 w-1.5 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
+          Technology Stack
+        </p>
+
+        <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+          Tools I use to build
+        </h3>
+      </div>
+
+      {/* <p className="max-w-md text-xs leading-5 text-gray-500 sm:text-right">
+        A practical toolkit spanning development, infrastructure,
+        deployment, design, and collaboration.
+      </p> */}
+    </div>
+  </div>
+
+  {/* Technology Categories */}
+  <div className="space-y-7">
+    {technologyGroups.map((group, groupIndex) => {
+  const isReverse = groupIndex % 2 !== 0;
+
+  // Repeat enough times to guarantee the screen is always filled.
+  const repeatedItems = Array.from(
+    { length: 6 },
+    () => group.items
+  ).flat();
+
+  return (
+    <div key={group.title} className="marquee-category">
+      {/* Category label */}
+      <div className="mb-3 flex items-center gap-3 px-6 sm:px-8">
+        <span className="h-px w-6 bg-gradient-to-r from-teal-400/50 to-indigo-500/20" />
+
+        <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gray-300 sm:text-xs">
+          {group.title}
+        </span>
+      </div>
+
+      {/* Marquee viewport */}
+      <div className="marquee-viewport">
+        {/* Edge gradients */}
+        <div className="marquee-fade marquee-fade-left" />
+        <div className="marquee-fade marquee-fade-right" />
+
+        {/* Moving track */}
+        <div
+          className={`marquee-track ${
+            isReverse ? "marquee-right" : "marquee-left"
+          }`}
         >
-          <div className="mb-7 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="mb-2 text-xs uppercase tracking-[0.2em] text-teal-400">
-                Technology Stack
-              </p>
+          {repeatedItems.map((item, index) => {
+            const Icon = item.icon;
 
-              <h3 className="text-2xl font-semibold text-white sm:text-3xl">
-                Tools I use to build
-              </h3>
-            </div>
-
-            <p className="max-w-sm text-xs leading-5 text-gray-500 sm:text-right">
-              A practical stack built around modern frontend development,
-              backend engineering, databases, and infrastructure.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap gap-2.5">
-            {skills.map((skill) => (
-              <span
-                key={skill}
-                data-skill
-                className="cursor-default rounded-lg border border-white/[0.07] bg-black/20 px-3.5 py-2 text-xs text-gray-300 transition-colors duration-200 hover:border-blue-400/30 hover:text-blue-300 sm:text-sm"
+            return (
+              <div
+                key={`${group.title}-${item.name}-${index}`}
+                className="tech-marquee-card"
               >
-                {skill}
-              </span>
-            ))}
-          </div>
+                <span className="tech-icon">
+                  <Icon size={18} />
+                </span>
+
+                <span className="tech-name">
+                  {item.name}
+                </span>
+              </div>
+            );
+          })}
         </div>
+      </div>
+    </div>
+  );
+})}
+  </div>
+
+  {/* Footer */}
+  <div className="mt-10 flex items-center justify-center gap-3 px-6">
+    <span className="h-px w-10 bg-white/10" />
+
+    <span className="text-md uppercase tracking-[0.2em] text-gray-200 sm:text-[10px]">
+      Always learning · always building
+    </span>
+
+    <span className="h-px w-10 bg-white/10" />
+  </div>
+</div>
 
         {/* Education */}
         <div ref={educationRef}>
