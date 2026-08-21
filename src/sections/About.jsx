@@ -38,90 +38,90 @@ import {
   FaLocationDot,
   FaServer,
   FaWandMagicSparkles,
-  FaChartLine
+  FaChartLine,
 } from "react-icons/fa6";
 
-import useScrollReveal from "../hooks/useScrollReveal";
+// import useScrollReveal from "../hooks/useScrollReveal";
 import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
 
 const About = () => {
   const technologyGroups = [
-  {
-    title: "Languages & Frameworks",
-    items: [
-      { name: "Python", icon: SiPython },
-      { name: "JavaScript", icon: SiJavascript },
-      { name: "React", icon: SiReact },
-      { name: "Next.js", icon: SiNextdotjs },
-      { name: "Django", icon: SiDjango },
-      { name: "Tailwind CSS", icon: SiTailwindcss },
-    ],
-  },
+    {
+      title: "Languages & Frameworks",
+      items: [
+        { name: "Python", icon: SiPython },
+        { name: "JavaScript", icon: SiJavascript },
+        { name: "React", icon: SiReact },
+        { name: "Next.js", icon: SiNextdotjs },
+        { name: "Django", icon: SiDjango },
+        { name: "Tailwind CSS", icon: SiTailwindcss },
+      ],
+    },
 
-  {
-    title: "Backend & Data",
-    items: [
-      { name: "Django REST Framework", icon: SiDjango },
-      { name: "PostgreSQL", icon: SiPostgresql },
-      { name: "Redis", icon: SiRedis },
-      { name: "Celery", icon: SiCelery },
-      { name: "REST APIs", icon: FaPlug },
-    ],
-  },
+    {
+      title: "Backend & Data",
+      items: [
+        { name: "Django REST Framework", icon: SiDjango },
+        { name: "PostgreSQL", icon: SiPostgresql },
+        { name: "Redis", icon: SiRedis },
+        { name: "Celery", icon: SiCelery },
+        { name: "REST APIs", icon: FaPlug },
+      ],
+    },
 
-  {
-    title: "Cloud & DevOps",
-    items: [
-      { name: "Docker", icon: SiDocker },
-      { name: "AWS", icon: SiAmazonwebservices },
-      { name: "Render", icon: SiRender },
-      { name: "Git", icon: SiGit },
-      { name: "GitHub", icon: SiGithub },
-    ],
-  },
+    {
+      title: "Cloud & DevOps",
+      items: [
+        { name: "Docker", icon: SiDocker },
+        { name: "AWS", icon: SiAmazonwebservices },
+        { name: "Render", icon: SiRender },
+        { name: "Git", icon: SiGit },
+        { name: "GitHub", icon: SiGithub },
+      ],
+    },
 
-  {
-    title: "Design & Collaboration",
-    items: [
-      { name: "Figma", icon: SiFigma },
-      { name: "Jira", icon: SiJira },
-      { name: "ClickUp", icon: SiClickup },
-      { name: "Notion", icon: SiNotion },
-    ],
-  },
+    {
+      title: "Design & Collaboration",
+      items: [
+        { name: "Figma", icon: SiFigma },
+        { name: "Jira", icon: SiJira },
+        { name: "ClickUp", icon: SiClickup },
+        { name: "Notion", icon: SiNotion },
+      ],
+    },
 
-  {
-    title: "Development & Monitoring",
-    items: [
-      { name: "VS Code", icon: VscVscode },
-      { name: "Postman", icon: SiPostman },
-      { name: "npm", icon: SiNpm },
-      { name: "Vercel", icon: SiVercel },
-      { name: "UptimeRobot", icon: FaChartLine },
-    ],
-  },
-];
+    {
+      title: "Development & Monitoring",
+      items: [
+        { name: "VS Code", icon: VscVscode },
+        { name: "Postman", icon: SiPostman },
+        { name: "npm", icon: SiNpm },
+        { name: "Vercel", icon: SiVercel },
+        { name: "UptimeRobot", icon: FaChartLine },
+      ],
+    },
+  ];
 
   const expertise = [
-  {
-    icon: FaServer,
-    title: "Backend Engineering",
-    description:
-      "Building structured backend systems, REST APIs, authentication flows, and reliable application logic with Django.",
-  },
-  {
-    icon: FaLayerGroup,
-    title: "Full-Stack Development",
-    description:
-      "Connecting modern React and Next.js interfaces with backend services and database-driven applications.",
-  },
-  {
-    icon: FaCloud,
-    title: "Cloud & Infrastructure",
-    description:
-      "Practical experience with Docker, AWS services, Redis, and Celery for deployment and background processing workflows.",
-  },
-];
+    {
+      icon: FaServer,
+      title: "Backend Engineering",
+      description:
+        "Building structured backend systems, REST APIs, authentication flows, and reliable application logic with Django.",
+    },
+    {
+      icon: FaLayerGroup,
+      title: "Full-Stack Development",
+      description:
+        "Connecting modern React and Next.js interfaces with backend services and database-driven applications.",
+    },
+    {
+      icon: FaCloud,
+      title: "Cloud & Infrastructure",
+      description:
+        "Practical experience with Docker, AWS services, Redis, and Celery for deployment and background processing workflows.",
+    },
+  ];
 
   const sectionRef = useRef(null);
   const headingRef = useRef(null);
@@ -130,12 +130,12 @@ const About = () => {
   const skillsRef = useRef(null);
   const educationRef = useRef(null);
 
-  const cardsRef = useScrollReveal({
-    selector: "[data-reveal]",
-    stagger: 0.08,
-    duration: 0.7,
-    ease: "power2.out",
-  });
+  // const cardsRef = useScrollReveal({
+  //   selector: "[data-reveal]",
+  //   stagger: 0.08,
+  //   duration: 0.7,
+  //   ease: "power2.out",
+  // });
 
   useGSAP(
     () => {
@@ -180,11 +180,11 @@ const About = () => {
               start: "top 88%",
               toggleActions: "play none none reverse",
             },
-          }
+          },
         );
       });
     },
-    { scope: sectionRef }
+    { scope: sectionRef },
   );
 
   useGSAP(
@@ -192,8 +192,7 @@ const About = () => {
       const section = sectionRef.current;
       if (!section || prefersReducedMotion()) return;
 
-      const expertiseCards =
-        section.querySelectorAll("[data-expertise-card]");
+      const expertiseCards = section.querySelectorAll("[data-expertise-card]");
 
       const skillBadges = section.querySelectorAll("[data-skill]");
 
@@ -215,7 +214,7 @@ const About = () => {
             start: "top 85%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
       gsap.fromTo(
@@ -238,7 +237,7 @@ const About = () => {
             start: "top 85%",
             toggleActions: "play none none reverse",
           },
-        }
+        },
       );
 
       const cleanups = [];
@@ -305,7 +304,7 @@ const About = () => {
 
       return () => cleanups.forEach((cleanup) => cleanup());
     },
-    { scope: sectionRef }
+    { scope: sectionRef },
   );
 
   return (
@@ -371,10 +370,10 @@ const About = () => {
 
               <p className="mt-4 max-w-3xl text-md leading-7 text-gray-300 sm:text-base">
                 My experience includes backend engineering, database-driven
-                applications, caching, asynchronous background processing,
-                cloud services, and modern React-based interfaces. I
-                continuously learn new technologies and apply them through
-                real-world projects.
+                applications, caching, asynchronous background processing, cloud
+                services, and modern React-based interfaces. I continuously
+                learn new technologies and apply them through real-world
+                projects.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3 text-xs text-gray-400">
@@ -384,10 +383,7 @@ const About = () => {
                 </div>
 
                 <div className="flex items-center gap-2 rounded-full border border-white/[0.08] bg-black/20 px-4 py-2">
-                  <FaBriefcase
-                    size={14}
-                    className="text-blue-400"
-                  />
+                  <FaBriefcase size={14} className="text-blue-400" />
                   Associate Software Developer
                 </div>
               </div>
@@ -442,10 +438,7 @@ const About = () => {
               </h3>
             </div>
 
-            <FaLayerGroup
-              className="hidden text-white/10 sm:block"
-              size={46}
-            />
+            <FaLayerGroup className="hidden text-white/10 sm:block" size={46} />
           </div>
 
           <div className="grid gap-4 md:grid-cols-3">
@@ -483,100 +476,98 @@ const About = () => {
         </div>
 
         <div
-  ref={skillsRef}
-  className="relative mb-8 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.035] py-8 sm:py-10"
->
-  {/* Header */}
-  <div className="relative z-10 mb-10 px-6 sm:px-8">
-    <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-      <div>
-        <p className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-teal-200">
-          <span className="h-1.5 w-1.5 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
-          Technology Stack
-        </p>
+          ref={skillsRef}
+          className="relative mb-8 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.035] py-8 sm:py-10"
+        >
+          {/* Header */}
+          <div className="relative z-10 mb-10 px-6 sm:px-8">
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="mb-2 flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-teal-200">
+                  <span className="h-1.5 w-1.5 rounded-full bg-teal-400 shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
+                  Technology Stack
+                </p>
 
-        <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-          Tools I use to build
-        </h3>
-      </div>
+                <h3 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                  Tools I use to build
+                </h3>
+              </div>
 
-      {/* <p className="max-w-md text-xs leading-5 text-gray-500 sm:text-right">
+              {/* <p className="max-w-md text-xs leading-5 text-gray-500 sm:text-right">
         A practical toolkit spanning development, infrastructure,
         deployment, design, and collaboration.
       </p> */}
-    </div>
-  </div>
+            </div>
+          </div>
 
-  {/* Technology Categories */}
-  <div className="space-y-7">
-    {technologyGroups.map((group, groupIndex) => {
-  const isReverse = groupIndex % 2 !== 0;
+          {/* Technology Categories */}
+          <div className="space-y-7">
+            {technologyGroups.map((group, groupIndex) => {
+              const isReverse = groupIndex % 2 !== 0;
 
-  // Repeat enough times to guarantee the screen is always filled.
-  const repeatedItems = Array.from(
-    { length: 6 },
-    () => group.items
-  ).flat();
+              // Repeat enough times to guarantee the screen is always filled.
+              const repeatedItems = Array.from(
+                { length: 6 },
+                () => group.items,
+              ).flat();
 
-  return (
-    <div key={group.title} className="marquee-category">
-      {/* Category label */}
-      <div className="mb-3 flex items-center gap-3 px-6 sm:px-8">
-        <span className="h-px w-6 bg-gradient-to-r from-teal-400/50 to-indigo-500/20" />
+              return (
+                <div key={group.title} className="marquee-category">
+                  {/* Category label */}
+                  <div className="mb-3 flex items-center gap-3 px-6 sm:px-8">
+                    <span className="h-px w-6 bg-gradient-to-r from-teal-400/50 to-indigo-500/20" />
 
-        <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gray-300 sm:text-xs">
-          {group.title}
-        </span>
-      </div>
+                    <span className="text-[12px] font-semibold uppercase tracking-[0.2em] text-gray-300 sm:text-xs">
+                      {group.title}
+                    </span>
+                  </div>
 
-      {/* Marquee viewport */}
-      <div className="marquee-viewport">
-        {/* Edge gradients */}
-        <div className="marquee-fade marquee-fade-left" />
-        <div className="marquee-fade marquee-fade-right" />
+                  {/* Marquee viewport */}
+                  <div className="marquee-viewport">
+                    {/* Edge gradients */}
+                    <div className="marquee-fade marquee-fade-left" />
+                    <div className="marquee-fade marquee-fade-right" />
 
-        {/* Moving track */}
-        <div
-          className={`marquee-track ${
-            isReverse ? "marquee-right" : "marquee-left"
-          }`}
-        >
-          {repeatedItems.map((item, index) => {
-            const Icon = item.icon;
+                    {/* Moving track */}
+                    <div
+                      className={`marquee-track ${
+                        isReverse ? "marquee-right" : "marquee-left"
+                      }`}
+                    >
+                      {repeatedItems.map((item, index) => {
+                        const Icon = item.icon;
 
-            return (
-              <div
-                key={`${group.title}-${item.name}-${index}`}
-                className="tech-marquee-card"
-              >
-                <span className="tech-icon">
-                  <Icon size={18} />
-                </span>
+                        return (
+                          <div
+                            key={`${group.title}-${item.name}-${index}`}
+                            className="tech-marquee-card"
+                          >
+                            <span className="tech-icon">
+                              <Icon size={18} />
+                            </span>
 
-                <span className="tech-name">
-                  {item.name}
-                </span>
-              </div>
-            );
-          })}
+                            <span className="tech-name">{item.name}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Footer */}
+          <div className="mt-10 flex items-center justify-center gap-3 px-6">
+            <span className="h-px w-10 bg-white/10" />
+
+            <span className="text-md uppercase tracking-[0.2em] text-gray-200 sm:text-[10px]">
+              Always learning · always building
+            </span>
+
+            <span className="h-px w-10 bg-white/10" />
+          </div>
         </div>
-      </div>
-    </div>
-  );
-})}
-  </div>
-
-  {/* Footer */}
-  <div className="mt-10 flex items-center justify-center gap-3 px-6">
-    <span className="h-px w-10 bg-white/10" />
-
-    <span className="text-md uppercase tracking-[0.2em] text-gray-200 sm:text-[10px]">
-      Always learning · always building
-    </span>
-
-    <span className="h-px w-10 bg-white/10" />
-  </div>
-</div>
 
         {/* Education */}
         <div ref={educationRef}>
