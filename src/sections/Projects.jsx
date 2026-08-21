@@ -3,7 +3,7 @@ import { useGSAP } from "@gsap/react";
 import grocery from "../assets/grocery.png";
 import estate from "../assets/estate.png";
 import ecommerce from "../assets/ecommerce.png";
-import elearning from "../assets/elearning.png";
+import elearning from "../assets/eLearning.png";
 import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
 
 const projects = [
