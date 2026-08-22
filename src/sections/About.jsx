@@ -430,7 +430,7 @@ const About = () => {
         <div ref={expertiseRef} className="mb-8">
           <div className="mb-6 flex items-end justify-between">
             <div>
-              <p className="mb-2 text-xs uppercase tracking-[0.2em] text-blue-400">
+              <p className="mb-2 text-xs uppercase tracking-[0.2em] mt-13 text-blue-400">
                 Expertise
               </p>
               <h3 className="text-2xl font-semibold text-white sm:text-3xl">
@@ -477,7 +477,7 @@ const About = () => {
 
         <div
           ref={skillsRef}
-          className="relative mb-8 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.035] py-8 sm:py-10"
+          className="relative mb-8 mt-8 overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.035] py-8 sm:py-10"
         >
           {/* Header */}
           <div className="relative z-10 mb-10 px-6 sm:px-8">
@@ -597,17 +597,17 @@ const About = () => {
                       BSc in Software Engineering (Hons)
                     </h4>
 
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
+                    <div className="flex items-center gap-2 text-xs text-white">
                       <FaCalendarDays size={14} />
                       2024 – 2027
                     </div>
                   </div>
 
-                  <p className="text-sm text-blue-300">
+                  <p className="text-md text-blue-300">
                     University of Bedfordshire
                   </p>
 
-                  <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500">
+                  <p className="mt-2 max-w-2xl text-sm leading-6 text-white">
                     Developing a strong foundation in software engineering,
                     programming, system design, databases, and software
                     development practices.
@@ -627,7 +627,7 @@ const About = () => {
                       Science Faculty
                     </h4>
 
-                    <div className="flex items-center gap-2 text-xs text-gray-500">
+                    <div className="flex items-center gap-2 text-xs text-white">
                       <FaCalendarDays size={14} />
                       2022 – 2023
                     </div>
@@ -637,7 +637,7 @@ const About = () => {
                     Khwopa Secondary School
                   </p>
 
-                  <p className="mt-2 max-w-2xl text-sm leading-6 text-gray-500">
+                  <p className="mt-2 max-w-2xl text-sm leading-6 text-white">
                     Completed higher secondary education with a foundation in
                     science and analytical problem solving.
                   </p>
@@ -649,7 +649,7 @@ const About = () => {
 
         {/* Bottom statement */}
         <div className="mt-12 text-center">
-          <p className="text-xs tracking-wide text-gray-600">
+          <p className="text-md tracking-wide text-white">
             Always learning. Always building. Always improving.
           </p>
         </div>
