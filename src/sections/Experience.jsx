@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { FaBriefcase } from "react-icons/fa6";
+import Codren from "../assets/Codren logo.png";
+import depthNepal from "../assets/depth_logo.png";
 import { useGSAP } from "@gsap/react";
 import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
 
@@ -126,8 +128,10 @@ const Experience = () => {
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between pl-4">
             <div>
               <div className="flex items-center gap-3 text-blue-400">
-                <FaBriefcase />
-                <h3 className="text-xl sm:text-2xl font-semibold">Vayu Tech Pvt Ltd</h3>
+                <div className="w-16 h-16 -ml-5">
+                <img src={Codren} alt="" className="w-full h-full" />
+                </div>
+                <h3 className="text-xl sm:text-2xl font-semibold">Codren Infotech Pvt Ltd</h3>
               </div>
               <p className="mt-2 text-lg text-gray-200">
                 Associate Software Developer
@@ -135,7 +139,7 @@ const Experience = () => {
             </div>
 
             <span className="inline-flex w-fit rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-300">
-              June 2026 – Present
+              Apr 2026 - Sept 2026 · 5 months
             </span>
           </div>
 
@@ -162,8 +166,11 @@ const Experience = () => {
           <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between pl-4">
             <div>
               <div className="flex items-center gap-3 text-blue-400">
-                <FaBriefcase />
-                <h3 className="text-xl sm:text-2xl font-semibold">Depth Nepal</h3>
+                <div className="w-16 h-16 -ml-5">
+
+                <img src={depthNepal} alt="" className="w-full h-full" />
+                </div>
+                <h3 className="text-xl sm:text-2xl -m-4 font-semibold">Depth Nepal</h3>
               </div>
               <p className="mt-2 text-lg text-gray-200">
                 Backend Engineering Intern
@@ -171,7 +178,7 @@ const Experience = () => {
             </div>
 
             <span className="inline-flex w-fit rounded-full border border-blue-500/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-300">
-              Jan 2026 – May 2026 · 4 months
+              Jan 2026 – Apr 2026 · 4 months
             </span>
           </div>
 
