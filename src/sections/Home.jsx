@@ -5,7 +5,7 @@ import { FiEye } from "react-icons/fi";
 import { FiDownload } from "react-icons/fi";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi";
 import profile from "../assets/profiles.png";
-import resumePdf from "../assets/SugamShrestha-Frontend.pdf";
+import resumePdf from "../assets/Sugam_Shrestha_Full_Stack_Developer_Resume.pdf";
 import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
 import { createHeroEntrance } from "../animations/preloader";
 import useMagneticHover from "../hooks/useMagneticHover";
