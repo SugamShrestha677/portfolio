@@ -21,7 +21,7 @@ export default async (req) => {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Portfolio Contact <onboarding@resend.dev>",
+      from: "Portfolio Contact <contact@shresthasugam.com.np>",
       to: ["info@shresthasugam.com.np"],
       reply_to: email,
       subject: `New message from ${name}`,
