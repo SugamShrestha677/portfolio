@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import useScrollReveal from "../hooks/useScrollReveal";
 import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
@@ -6,6 +6,7 @@ import { gsap, prefersReducedMotion } from "../animations/gsapConfig";
 const Contact = () => {
   const formRef = useRef(null);
   const submitBtnRef = useRef(null);
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
 
   const sectionRef = useScrollReveal({
     selector: "[data-reveal]",
@@ -46,7 +47,8 @@ const Contact = () => {
       if (btn) {
         const onClick = () => {
           const ripple = document.createElement("span");
-          ripple.className = "absolute inset-0 rounded bg-white/20 pointer-events-none";
+          ripple.className =
+            "absolute inset-0 rounded bg-white/20 pointer-events-none";
           ripple.style.transform = "scale(0)";
           btn.appendChild(ripple);
 
@@ -67,6 +69,40 @@ const Contact = () => {
     { scope: formRef }
   );
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (status === "sending") return;
+
+    const form = e.currentTarget;
+    const data = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim(),
+    };
+
+    setStatus("sending");
+
+    try {
+      const res = await fetch("/.netlify/functions/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+
+      setStatus("success");
+      form.reset();
+
+      // Reset the success message after 5s so the form is reusable
+      setTimeout(() => setStatus("idle"), 5000);
+    } catch (err) {
+      console.error("Contact form error:", err);
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
+  };
+
   return (
     <section
       id="contact"
@@ -83,8 +119,7 @@ const Contact = () => {
         <form
           ref={formRef}
           name="contact"
-          method="POST"
-          action="https://formsubmit.co/info@shresthasugam.com.np"
+          onSubmit={handleSubmit}
           className="space-y-6"
         >
           <div data-reveal>
@@ -122,10 +157,22 @@ const Contact = () => {
             ref={submitBtnRef}
             data-reveal
             type="submit"
-            className="w-full bg-gradient-to-r flex justify-center cursor-pointer from-teal-500 to-indigo-600 px-6 rounded font-medium transition-all duration-200 relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] py-3 active:scale-[0.97]"
+            disabled={status === "sending"}
+            className="w-full bg-gradient-to-r flex justify-center cursor-pointer from-teal-500 to-indigo-600 px-6 rounded font-medium transition-all duration-200 relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] py-3 active:scale-[0.97] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
           >
-            Submit
+            {status === "sending" ? "Sending..." : "Submit"}
           </button>
+
+          {status === "success" && (
+            <p className="text-teal-400 text-center text-sm">
+              Message sent successfully. I'll get back to you soon!
+            </p>
+          )}
+          {status === "error" && (
+            <p className="text-red-400 text-center text-sm">
+              Something went wrong. Please try again or email me directly.
+            </p>
+          )}
         </form>
       </div>
     </section>
